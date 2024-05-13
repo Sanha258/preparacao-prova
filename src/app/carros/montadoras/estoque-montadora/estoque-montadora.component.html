@@ -1,0 +1,44 @@
+<div class="container">
+  <form>
+      <div class="card">
+          <div class="card-header">
+              <h3>{{carro.id ? 'Edição de' : 'Nova'}} Cadastrar carro</h3>
+          </div>
+          <div class="card-body">
+              <div class="row g-3">
+                  <div class="form-group col-md-6">
+                      <label for="nome">Nome:</label>
+                      <input type="text" class="form-control" placeholder="Nome Vacina" aria-label="Nome Vacina" name="nome"
+                             [(ngModel)]="carro.nome" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                      <label for="pais">nome:</label>
+                      <input type="text" class="form-control" placeholder="País de Origem da Vacina" aria-label="País de Origem da Vacina" name="pais"
+                             [(ngModel)]="seletor.nome" required>
+                  </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="pesquisador" class="form-label">Marca:</label>
+                  <input type="text" class="form-control" placeholder="Nome Pesquisador" aria-label="Nome Pesquisador" name="pesquisadorResponsavel" [(ngModel)]="seletor.Marca">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="dataInicioPesquisa" class="form-label">Data:</label>
+                  <input type="date" class="form-control" name="dataInicioPesquisa" [(ngModel)]="vacina.dataInicioPesquisa">
+                </div>
+              </div>
+
+              <div class="row">
+                  <div class="form-group col-md-6">
+                      <button type="button" class="btn btn-outline-warning" (click)="consultarEstoque()">
+                          <i class="bi bi-arrow-left"></i> consultarEstoque
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
+
+
