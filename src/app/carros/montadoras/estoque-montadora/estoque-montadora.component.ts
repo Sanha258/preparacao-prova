@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './estoque-montadora.component.scss'
 })
 export class EstoqueMontadoraComponent implements OnInit{
+carro: any;
+consultarEstoque() {
+throw new Error('Method not implemented.');
+}
   ngOnInit(): void {
 
   }

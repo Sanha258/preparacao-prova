@@ -13,50 +13,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ListagemCarrosComponent implements OnInit{
-
-  public carros: Carro[] =[];
-  public seletor: CarroSeletor = new CarroSeletor;
-
-  constructor (private carroService: CarrosService) {
-
-  }
-
   ngOnInit(): void {
-    this.consultarTodasCarros();
-
-    this..consultarTodos().subscribe(
-      resultado => {
-        this.paises = resultado;
-      },
-      erro => {
-        console.log('Erro ao buscar países' + erro)
-      }
-    );
+    throw new Error('Method not implemented.');
   }
 
-  public pesquisar(){
-    this.vacinaService.consultarComSeletor(this.seletor).subscribe(
-      resultado => {
-        this.vacinas = resultado;
-      },
-      erro => {
-        console.log('Erro ao buscar todas as vacinas' + erro)
-      }
-    )
-  }
-
-  limpar(){
-    this.seletor = new VacinaSeletor();
-  }
-
-  private consultarTodasVacinas(){
-    this.vacinaService.consultarTodas().subscribe(
-      resultado => {
-         this.vacinas = resultado;
-      },
-      erro => {
-        console.log('Erro ao buscar todas as vacinas' + erro)
-      }
-    );
-  }
 }
+
+
